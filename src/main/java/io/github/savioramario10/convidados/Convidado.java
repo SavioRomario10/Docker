@@ -1,11 +1,20 @@
 package io.github.savioramario10.convidados;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@Entity
 @AllArgsConstructor
+@NoArgsConstructor
 public class Convidado {
-  private String nome;
+  @Id
+  @Column
   private String cpf;
+  @Column
+  private String nome;
 }
